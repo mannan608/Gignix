@@ -177,7 +177,7 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
-  color: var(--bs-neutral-900);
+  color: var(--bs-white);
   font-family: "Poppins", sans-serif;
 }
 
@@ -205,7 +205,7 @@ p {
   margin: 0;
   padding: 0;
   font-weight: 400;
-  color: var(--bs-neutral-600);
+  color: var(--bs-white);
   font-size: 14px;
   line-height: 20px;
 }

@@ -2,7 +2,7 @@
 
 html,
 body {
-  background: var(--bs-white);
+  background: var(--bs-neutral-900);
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -48,7 +48,7 @@ body {
   }
 
   .navbar-nav .nav-item .nav-link {
-    color: var(--bs-neutral-900);
+    color: var(--bs-white);
     font-weight: 600;
     font-size: 15px;
     display: flex;
@@ -77,7 +77,7 @@ body {
   display: none !important;
 }
 .hero-wrapper {
-  background: #e7faef;
+  /* background: #e7faef; */
   color: white;
   border-radius: 0 0 20px 20px;
   margin-top: -88px;
@@ -115,21 +115,16 @@ body {
   padding-bottom: 4px;
 }
 
-.category-btn {
-  background: #d7c4a1;
-  color: #111;
-  border: none;
-  padding: 8px 20px;
-  font-weight: 600;
-}
-
 .category-card {
   background: none;
   border: none;
   text-align: center;
-  color: #fff;
+  color: var(--bs-white);
   position: relative;
   transition: transform 0.3s ease;
+  h6 {
+    color: var(--bs-white);
+  }
 }
 
 .category-card:hover {
@@ -164,9 +159,11 @@ body {
     row-gap: 24px;
   }
 }
-
+p {
+  color: var(--bs-white);
+}
 .badge-count {
-  background: #322;
+  background: var(--bs-white);
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -175,6 +172,8 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+  color: var(--bs-primary-500);
+  font-weight: 600;
 }
 
 .how-it-works {
@@ -213,12 +212,13 @@ body {
 
 .why-choose h2 {
   font-weight: 700;
-  color: #ccc;
+  color: white;
 }
 
 .why-choose .feature-card {
-  background: #1b1513;
-  color: #fff;
+  /* background: #1b1513; */
+  color: white;
+
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -265,20 +265,7 @@ body {
   display: inline-block;
 }
 
-.section-title:after {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 4px;
-  background-color: var(--primary-color);
-  bottom: -10px;
-  left: 0;
-  border-radius: 2px;
-}
-
 .articles-section {
-  background-color: var(--light-color);
-
   .row {
     margin: 0 -12px;
     row-gap: 20px;
@@ -317,21 +304,6 @@ body {
   margin-bottom: 0.75rem;
 }
 
-/* .accordion-button {
-  font-weight: 600;
-  padding: 1.25rem;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: rgba(78, 115, 223, 0.1);
-  color: var(--primary-color);
-}
-
-.accordion-button:focus {
-  box-shadow: none;
-  border-color: rgba(78, 115, 223, 0.25);
-} */
-
 .view-all-btn {
   color: var(--primary-color);
   font-weight: 600;
@@ -354,7 +326,7 @@ body {
 }
 
 .features-section {
-  background: #e7faef;
+  /* background: #e7faef; */
   padding: 32px 24px;
   .row {
     margin: 0 -16px;
@@ -363,6 +335,10 @@ body {
       padding: 16px;
     }
   }
+}
+
+li {
+  color: var(--bs-white);
 }
 
 .line-clamp-2 {
@@ -411,6 +387,7 @@ body {
   height: fit-content;
   font-size: 18px;
   gap: 14px;
+  color: var(--bs-white);
 }
 
 .accordion-item {
@@ -420,11 +397,13 @@ body {
 
 .accordion-button:not(.collapsed) {
   background-color: transparent;
+  color: var(--bs-white);
 }
 .accordion-body {
   padding: 0;
   margin-top: 16px;
   font-size: 14px;
+  color: var(--bs-white);
 }
 .footerContainer {
   margin-top: 120px;
@@ -437,4 +416,82 @@ body {
       font-size: 24px;
     }
   }
+}
+
+.text-black {
+  color: var(--bs-white) !important;
+}
+
+.glow-on-hover {
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #002bff,
+    #00bfff
+  ); /* Only two blue tones */
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 200%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 4s linear infinite; /* Shorter duration for smoother loop */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 32px;
+}
+
+.glow-on-hover:active {
+  color: white;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--bs-primary-500);
+  left: 0;
+  top: 0;
+  border-radius: 32px;
+}
+
+/* @keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+} */
+
+.btn {
+  border-radius: 32px;
+}
+
+.social-media a i {
+  /* background: var(--bs-primary-500); */
+  color: var(--bs-primary-500);
+  font-size: 24px;
+  transition: color 0.3s ease-in-out;
 }

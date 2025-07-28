@@ -98,6 +98,11 @@
   .choicesImg {
     display: none;
   }
+  .hero {
+    .w-50.ps-5 {
+      padding: 0 !important;
+    }
+  }
 }
 @media only screen and (max-width: 767px) {
   .popular-category {
@@ -237,7 +242,7 @@
   .mobile-menu .mobile-menu-nav .menu-outer {
     padding-top: 20px;
     display: flex;
-    gap: 16px;
+    gap: 10px;
     flex-direction: column;
   }
 
@@ -258,10 +263,12 @@
 
   .navbar-nav .nav-item {
     width: 50%;
+    color: black;
   }
 
   .navbar-nav .nav-item .nav-link {
     align-items: start;
+    color: black;
   }
 
   /* .menu-outer .dropdown-menu.show {
@@ -285,6 +292,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: black;
   }
 
   .menu-outer .mobile-nav {

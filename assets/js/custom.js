@@ -19,7 +19,7 @@ const tooltipList = [...tooltipTriggerList].map(
     });
 
     // Close mobile menu when clicking on backdrop or close button
-    $(".menu-backdrop, .mobile-menu-close").on("click", function () {
+    $(".menu-backdrop, .close-btn").on("click", function () {
       $("body").removeClass("mobile-menu-visible");
     });
   }
